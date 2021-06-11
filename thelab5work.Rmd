@@ -6,7 +6,16 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(dplyr)
+library(moderndive)
+library(gapminder)
+library(skimr)
+library(kableExtra)
+library(gridExtra)
+library(GGally)
+library(tinytex)
 ```
 
 ## R Markdown
@@ -28,3 +37,10 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+``` {r explore, echo=TRUE}
+evals.scores <- evals %>%
+  select(score, bty_avg)
+evals.scores
+```
