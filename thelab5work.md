@@ -13,10 +13,6 @@ When you click the **Knit** button a document will be generated that
 includes both content as well as the output of any embedded R code
 chunks within the document. You can embed an R code chunk like this:
 
-``` r
-summary(cars)
-```
-
     ##      speed           dist       
     ##  Min.   : 4.0   Min.   :  2.00  
     ##  1st Qu.:12.0   1st Qu.: 26.00  
@@ -33,3 +29,24 @@ You can also embed plots, for example:
 
 Note that the `echo = FALSE` parameter was added to the code chunk to
 prevent printing of the R code that generated the plot.
+
+``` r
+evals.scores <- evals %>%
+  select(score, bty_avg)
+evals.scores
+```
+
+    ## # A tibble: 463 x 2
+    ##    score bty_avg
+    ##    <dbl>   <dbl>
+    ##  1   4.7    5   
+    ##  2   4.1    5   
+    ##  3   3.9    5   
+    ##  4   4.8    5   
+    ##  5   4.6    3   
+    ##  6   4.3    3   
+    ##  7   2.8    3   
+    ##  8   4.1    3.33
+    ##  9   3.4    3.33
+    ## 10   4.5    3.17
+    ## # ... with 453 more rows
